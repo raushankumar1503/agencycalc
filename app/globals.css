@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-neutral-50 text-neutral-800 antialiased;
+  }
+
+  /* Visible keyboard focus everywhere (accent ring). */
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-white;
+  }
+}
+
+@layer components {
+  /* Small, rectangular utility control — not a pill CTA. */
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md border border-neutral-300
+      bg-white px-3 py-1.5 text-sm font-medium text-neutral-700
+      hover:bg-neutral-100 disabled:cursor-not-allowed disabled:opacity-50
+      focus:outline-none;
+  }
+
+  .btn-primary {
+    @apply border-accent bg-accent text-white hover:bg-accent-dark;
+  }
+
+  .field-input {
+    @apply w-full rounded-md border border-neutral-300 bg-white px-3 py-2
+      text-sm text-right tabular-nums text-neutral-900
+      placeholder:text-neutral-400 placeholder:text-left
+      focus:border-accent;
+  }
+
+  .field-label {
+    @apply mb-1 block text-sm font-medium text-neutral-700;
+  }
+
+  .field-helper {
+    @apply mt-1 text-xs leading-relaxed text-neutral-500;
+  }
+
+  .field-error {
+    @apply mt-1 text-xs font-medium text-red-600;
+  }
+
+  /* Article/guide body typography. Applied to guide content and long-form
+     reading pages so headings, lists, and paragraphs stay consistent without
+     adding the typography plugin. */
+  .guide-prose {
+    @apply max-w-2xl text-sm leading-relaxed text-neutral-700;
+  }
+
+  .guide-prose > * + * {
+    @apply mt-4;
+  }
+
+  .guide-prose h2 {
+    @apply mb-2 text-base font-semibold text-neutral-900;
+  }
+
+  .guide-prose h3 {
+    @apply mb-2 text-sm font-semibold text-neutral-900;
+  }
+
+  .guide-prose p {
+    @apply text-neutral-700;
+  }
+
+  .guide-prose ul,
+  .guide-prose ol {
+    @apply pl-5;
+  }
+
+  .guide-prose ul {
+    @apply list-disc;
+  }
+
+  .guide-prose ol {
+    @apply list-decimal;
+  }
+
+  .guide-prose li {
+    @apply mb-1.5;
+  }
+
+  .guide-prose a {
+    @apply font-medium text-neutral-800 underline decoration-neutral-300
+      underline-offset-2 hover:decoration-neutral-600;
+  }
+
+  .guide-prose strong {
+    @apply font-semibold text-neutral-900;
+  }
+
+  .guide-prose blockquote {
+    @apply border-l-2 border-neutral-300 pl-4 text-neutral-600;
+  }
+
+  .guide-prose code {
+    @apply rounded bg-neutral-100 px-1.5 py-0.5 text-[0.85em] text-neutral-800;
+  }
+
+  .guide-prose hr {
+    @apply my-6 border-neutral-200;
+  }
+}
