@@ -22,6 +22,11 @@ export const metadata: Metadata = {
     description:
       "Practical calculators and guides for freelance web developers and small agencies: project quotes, website maintenance pricing, and extra-scope change fees.",
   },
+  // HilltopAds website verification tag. Rendered into <head> on every page,
+  // including the homepage. Verification only — no ad-zone script yet.
+  other: {
+    "6eefe13dfbc5b13e0660bf3325dfbed78fb89807": "6eefe13dfbc5b13e0660bf3325dfbed78fb89807",
+  },
 };
 
 const organizationLd = {
